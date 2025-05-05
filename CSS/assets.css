@@ -1,0 +1,42 @@
+.enter-btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.x-btn {
+    background-color: rgba(127, 90, 90, 0.822);
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.A-btn {
+    background-color: rgba(127, 90, 90, 0.822);
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.N-btn {
+    background-color: rgba(127, 90, 90, 0.822);
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.T-btn {
+    background-color: rgba(127, 90, 90, 0.822);
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}

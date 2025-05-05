@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+    <link rel="stylesheet" href="./CSS/assets.css">
+    <link rel="stylesheet" href="./CSS/standard.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <script src="./JS/templates.js"></script>
+    <script src="./JS/localStorage.js"></script>
+</head>
+
+<body onload="init()">
+<section class="main-container">    
+    <div class="notes_input_container">
+        <div>
+            <h1>Notizblock</h1>
+        </div>
+        
+        <div class="input_container">
+            <input id="title_input" placeholder="Your title" type="text"> 
+            <input id="note_input" placeholder="make notes..." type="text"> 
+            <button class="enter-btn" onclick="addNotesAndTitles()">Enter</button>
+            
+        </div>
+    </div>
+    
+<section class="second-container">
+    <div class="containers">
+            <h2>Notizen</h2>
+        
+        <div class="notes">
+            <div id="content">    
+            </div>
+        </div>
+    </div>
+    
+    <div class="containers">
+            <h2>Trash</h2>
+        
+        <div class="trash-notes">
+            <div id="trash_content">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="containers">
+            <h2>Archiv</h2>
+        
+        <div class="archiv-notes">
+            <div id="archiv_content">
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+</body>
+
+</html>
