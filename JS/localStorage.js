@@ -18,7 +18,7 @@ function getFromLocalStorage() {
     let localTrashNotes = JSON.parse(localStorage.getItem("allNotes.trashNotes"));
     let localTrashNotesTitles = JSON.parse(localStorage.getItem("allNotes.trashNotesTitles"));
     let localArchivNotes = JSON.parse(localStorage.getItem("allNotes.archivNotes"));
-    let localArchivNotesTitles = JSON.parse(localStorage.getItem("aallNotes.rchivNotesTitles"));
+    let localArchivNotesTitles = JSON.parse(localStorage.getItem("allNotes.archivNotesTitles"));
 
     if (localNotes != null) {
         allNotes.notes = localNotes;

@@ -59,15 +59,15 @@ function addNotesAndTitles() {
     let noteInputRef = document.getElementById('note_input');
     let noteTitleInputRef = document.getElementById('title_input');
 
-    let noteTitle = noteTitleInputRef.value.trim();
+    let noteTitleInput = noteTitleInputRef.value.trim();
     let noteInput = noteInputRef.value.trim();
 
-    if (noteTitle === "" && noteInput === "") {
+    if (noteTitleInput === "" && noteInput === "") {
         alert("Titel und Notiz Hinzufügen");
         noteInputRef.value = "";
         noteTitleInputRef.value = "";
         return;
-    } else if (noteTitle === "") {
+    } else if (noteTitleInput === "") {
         alert("Titel wurde noch nicht eingetragen");
         noteInputRef.value = "";
         noteTitleInputRef.value = "";
@@ -80,7 +80,7 @@ function addNotesAndTitles() {
     }
 
     allNotes.notes.push(noteInput);
-    allNotes.notesTitles.push(noteTitle);
+    allNotes.notesTitles.push(noteTitleInput);
 
     init();
 
