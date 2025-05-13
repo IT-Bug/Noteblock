@@ -14,6 +14,7 @@ function moveNote(indexNote, startKey, destinationKey) {
     let noteTitle = allNotes[startKey + "Titles"].splice(indexNote, 1);
     allNotes[destinationKey + "Titles"].push(noteTitle[0]);
 
+    saveToLocalStorage();
     init();
 }
 
@@ -59,15 +60,15 @@ function addNotesAndTitles() {
     let noteInputRef = document.getElementById('note_input');
     let noteTitleInputRef = document.getElementById('title_input');
 
-    let noteTitleInput = noteTitleInputRef.value.trim();
+    let noteTitle = noteTitleInputRef.value.trim();
     let noteInput = noteInputRef.value.trim();
 
-    if (noteTitleInput === "" && noteInput === "") {
+    if (noteTitle === "" && noteInput === "") {
         alert("Titel und Notiz Hinzufügen");
         noteInputRef.value = "";
         noteTitleInputRef.value = "";
         return;
-    } else if (noteTitleInput === "") {
+    } else if (noteTitle === "") {
         alert("Titel wurde noch nicht eingetragen");
         noteInputRef.value = "";
         noteTitleInputRef.value = "";
@@ -80,8 +81,9 @@ function addNotesAndTitles() {
     }
 
     allNotes.notes.push(noteInput);
-    allNotes.notesTitles.push(noteTitleInput);
+    allNotes.notesTitles.push(noteTitle);
 
+    saveToLocalStorage();
     init();
 
     // Input clear
@@ -96,6 +98,7 @@ function completeNotedelete(indexTrashNote) {
     allNotes.trashNotes.splice(indexTrashNote, 1);
     allNotes.trashNotesTitles.splice(indexTrashNote, 1);
 
+    saveToLocalStorage();
     init();
 }
 
@@ -106,6 +109,7 @@ function completeArchivNotedelete(indexArchivNote) {
     allNotes.archivNotes.splice(indexArchivNote, 1);
     allNotes.archivNotesTitles.splice(indexArchivNote, 1);
 
+    saveToLocalStorage();
     init();
 }
 
